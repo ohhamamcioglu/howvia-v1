@@ -85,19 +85,21 @@ function CountdownApp() {
   };
 
   return (
-    <div className="fixed bottom-75 left-25 z-50 bg-transparent backdrop-blur-md shadow-xl rounded-xl p-2 w-72 flex flex-col items-center gap-3 transition-all">
-      <h2 className="text-lg font-semibold text-gray-700">🕒 Geri Sayım</h2>
+    <div className="fixed bottom-4 right-4 left-4  sm:left-20 sm:top-60 z-50 bg-tranparent backdrop-blur-md shadow-xl rounded-xl p-4 w-auto sm:w-72 sm:h-35 flex flex-col items-center gap-3 transition-all">
+      <h2 className="text-base sm:text-lg font-semibold text-gray-700 text-center">
+        🕒 Geri Sayım
+      </h2>
 
       {!aktif && (
         <input
           type="datetime-local"
-          className="p-2 border rounded-md w-full"
+          className="p-2 border rounded-md w-full text-sm"
           value={hedefZamanStr}
           onChange={(e) => setHedefZamanStr(e.target.value)}
         />
       )}
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-wrap justify-center">
         {!aktif && (
           <button
             className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600 text-sm"
@@ -116,7 +118,7 @@ function CountdownApp() {
       </div>
 
       {kalanSüre !== null && (
-        <div className="text-lg font-mono text-gray-800">
+        <div className="text-base sm:text-lg font-mono text-gray-800 text-center">
           {kalanSüre > 0 ? `⏳ ${formatla(kalanSüre)} kaldı` : "✅ Süre doldu!"}
         </div>
       )}

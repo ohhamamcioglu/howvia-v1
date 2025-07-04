@@ -65,17 +65,17 @@ function TodoApp() {
         backgroundPosition: "center",
       }}
     >
-      <div className="backdrop-blur-sm bg-white/70 min-h-screen px-4 py-8">
+      <div className="backdrop-blur-sm bg-white/70 min-h-screen px-4 py-8 relative">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center gap-2">
           <MdChecklist className="text-green-600" />
           HoWVia Todo App
         </h1>
 
-        <CountdownApp/>
+        <CountdownApp />
 
         <div className="flex flex-col md:flex-row justify-center gap-6">
           {/* GÖREV EKLEME */}
-          <div className="flex flex-col w-1/4 gap-4">
+          <div className="flex flex-col w-full md:w-1/4 gap-4">
             <input
               className="w-full p-3 border rounded-lg"
               value={görev}
